@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="154" id="syL-pI-eYj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="154" id="syL-pI-eYj" customClass="CustomReservationTableViewCell" customModule="ReservationControllerCapstonePrototype" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="768" height="154"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="syL-pI-eYj" id="3O4-g3-JMT">
@@ -80,6 +80,9 @@
                                                     <state key="normal" title="Seated">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="seatedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aau-X6-cKR"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hb-GK-NAQ">
                                                     <rect key="frame" x="504" y="76" width="100" height="57"/>
@@ -89,6 +92,9 @@
                                                     <state key="normal" title="Modify">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="modifyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Bv-7I-ocF"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpI-ah-7kd">
                                                     <rect key="frame" x="612" y="76" width="100" height="57"/>
@@ -98,6 +104,9 @@
                                                     <state key="normal" title="Cancel">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="cancelTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2BC-0d-btP"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvO-Me-nam">
                                                     <rect key="frame" x="612" y="11" width="100" height="57"/>
@@ -107,16 +116,37 @@
                                                     <state key="normal" title="Delay">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="delayTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGy-Rj-v8l"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnCancel" destination="lpI-ah-7kd" id="IUO-PN-h3p"/>
+                                            <outlet property="btnDelay" destination="GvO-Me-nam" id="d67-ij-n0A"/>
+                                            <outlet property="btnModify" destination="7hb-GK-NAQ" id="hmP-9w-nXs"/>
+                                            <outlet property="btnSeated" destination="7uu-sq-1BN" id="Lao-i7-jV7"/>
+                                            <outlet property="lblDate" destination="p2S-po-ch9" id="33p-ZS-cpu"/>
+                                            <outlet property="lblName" destination="KeP-Tf-4Zl" id="Tmv-hV-xBl"/>
+                                            <outlet property="lblNumberOfPeople" destination="WdP-7U-vWK" id="p3s-2R-JXr"/>
+                                            <outlet property="lblPhoneNumber" destination="bvk-KZ-oWh" id="qY9-0H-Csg"/>
+                                            <outlet property="lblPpl" destination="Rh1-fD-Z67" id="EYf-Se-c1D"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="izl-L0-xjv"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lIR-jD-QKI"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tblReservations" destination="tdd-oU-hav" id="bqn-oZ-7LJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		A17B382824406DE60024343D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17B382724406DE60024343D /* Assets.xcassets */; };
 		A17B382B24406DE60024343D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17B382924406DE60024343D /* LaunchScreen.storyboard */; };
 		A17B383324406E2E0024343D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A17B383224406E2E0024343D /* GoogleService-Info.plist */; };
+		A17B38352440738C0024343D /* CustomReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B38342440738B0024343D /* CustomReservationTableViewCell.swift */; };
+		A17B3837244073C50024343D /* ReservationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B3836244073C50024343D /* ReservationCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A17B382A24406DE60024343D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A17B382C24406DE60024343D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A17B383224406E2E0024343D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A17B38342440738B0024343D /* CustomReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomReservationTableViewCell.swift; sourceTree = "<group>"; };
+		A17B3836244073C50024343D /* ReservationCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,6 @@
 				13BBF3CE1F9235C26BF76B17 /* Pods-ReservationControllerCapstonePrototype.debug.xcconfig */,
 				1AC5288C674BD22BEB9D8BC0 /* Pods-ReservationControllerCapstonePrototype.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,6 +76,7 @@
 		A17B381F24406DE50024343D /* ReservationControllerCapstonePrototype */ = {
 			isa = PBXGroup;
 			children = (
+				A17B3836244073C50024343D /* ReservationCollection.swift */,
 				A17B382024406DE50024343D /* AppDelegate.swift */,
 				A17B382224406DE50024343D /* ViewController.swift */,
 				A17B382424406DE50024343D /* Main.storyboard */,
@@ -80,6 +84,7 @@
 				A17B382924406DE60024343D /* LaunchScreen.storyboard */,
 				A17B382C24406DE60024343D /* Info.plist */,
 				A17B383224406E2E0024343D /* GoogleService-Info.plist */,
+				A17B38342440738B0024343D /* CustomReservationTableViewCell.swift */,
 			);
 			path = ReservationControllerCapstonePrototype;
 			sourceTree = "<group>";
@@ -208,7 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A17B3837244073C50024343D /* ReservationCollection.swift in Sources */,
 				A17B382324406DE50024343D /* ViewController.swift in Sources */,
+				A17B38352440738C0024343D /* CustomReservationTableViewCell.swift in Sources */,
 				A17B382124406DE50024343D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
